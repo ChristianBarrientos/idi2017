@@ -1,0 +1,31 @@
+
+                <form method="post" action="index.php?action=Registrar::verificar_usuario">
+                    <h3>Ingrese Sus Datos</h3>
+                    <!-- START BLOCK : error_ -->
+                    <div class="alert alert-danger">
+                        <span>Los datos no concuerdan con un usuario registrado en el sistema.</span>
+                    </div>
+
+                    <!-- END BLOCK : error_ -->
+                    <br>
+                     <div class="form-group">
+                         <label for="correo">Email o Usuario</label>
+                         <input name="correo" type="text" class="form-control"  placeholder="Email o Usuario" required>
+                     </div>
+                     <div class="form-group">
+                         <label for="pass">Contraseña</label>
+                         <input name="pass" type="password" class="form-control" placeholder="Contraseña" required>
+                     </div>
+                     <div class="checkbox">
+                         <label><input type="checkbox" required>Tilde Esta Casilla Para Iniciar Sesion</label>
+                     </div>
+                     <div class="boton_centro">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                     </div>
+                     <br><br>
+                <a href="index.php?action=Registrar::registrar_usuario_formulario">No Poseo una Cuenta</a>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="index.php?action=Registrar::formulario_evaluador">Quiero Ser Evaluador</a>
+                </form>
+
+   

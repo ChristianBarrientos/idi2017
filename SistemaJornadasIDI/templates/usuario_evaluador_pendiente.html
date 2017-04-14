@@ -1,0 +1,23 @@
+<form  method="post" action="index.php?action=Registrar::registrar_evaluador_pendiente&id_pendiente={id_pendiente}">
+                        <div class="alert alert-success">
+                            <span><b>Evaluador PENDIENTE.</b></span><br>
+                            <span><b>Nombre</b></span><br>
+                            <span>{nombre}</span><br>
+                            <span><b>Apellido</b></span><br>
+                            <span>{apellido}</span><br>
+                            <span><b>Correo</b></span><br>
+                            <span>{correo}</span><br>
+                            <!-- START BLOCK : no_user -->
+                            <div class="alert alert-danger">
+                            <span>Usuario ya en uso!!</span>   
+                            </div>
+                            <!-- END BLOCK : no_user --> 
+                            <label>Ingrese Usuario</label>
+                             <input name="usuario_nuevo" type="text" class="form-control"  placeholder="Nombre Usuario Nuevo" required> 
+                             <label>Ingrese Contraseña</label>
+                             <input name="pass_nuevo" type="text" class="form-control"  placeholder="Contraseña Nueva" required><br>     
+                        </div>
+                         <div class="boton_centro">
+                            <button type="submit" class="btn btn-primary" >Aceptar</button>
+                         </div>
+</form>

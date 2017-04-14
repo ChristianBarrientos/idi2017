@@ -1,0 +1,39 @@
+<h2 align="left">{nombre_evaluador}</h2>
+<h3 align="left">Título asignado.</h3>
+
+<table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Nombre</th>
+            <th>Area</th>
+            <th>Autores</th>
+            <th>Tipo</th> 
+            <th>Condicion</th>                
+            <th>Devolucion</th>  
+           
+        </tr>
+        <tr>
+        <!-- START BLOCK : cuerpo_lista -->
+            <td>{nombre}</td>
+            <td>{area}</td>
+            <td>{autores}</td>
+            <td>{tipo}</td>
+            <td><strong>{condicion}</strong></td>
+            <td>{archivo_i}
+            {sin_devolucion}
+            <!-- START BLOCK : con_descarga_ -->
+                <a href="{id_archivo}" download>
+                    <button type="button"  class="btn btn-success btn-md">Descargar
+                    </button> </a>
+            <!-- END BLOCK : con_descarga_ -->
+            </td>
+            
+        </tr>
+        <!-- END BLOCK : cuerpo_lista -->
+    </table>
+<br><br>    
+<span><p>
+    <strong>Los nombres con los que se descargan los archivos, posee el patron de:<br>
+    NOMBRE_USUARIO.[RESUMEN1 || RESUMEN2 || TRABAJOFINAL].NOMBRE_TITULO.DOCX</strong>
+</p></span>
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

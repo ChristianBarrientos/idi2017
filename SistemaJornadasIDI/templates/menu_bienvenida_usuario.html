@@ -1,0 +1,72 @@
+<span>
+	<h3><p>Bienvenido al sistema de autogestión de Documentos, desarrollado para las jornadas CODINOA 2017.</p>
+	<p>Haga Click en el boton "<u>Agregar un Título</u>" para poder agregar un título a su cuenta creada.</p></h3>
+	<p><strong>Máximo de títulos: 2 (dos)</strong></p>
+    <p><strong>Máximo de resumenes por título: 1 (uno)</strong></p>
+    <p><strong>Máximo de trabajos final por título: 1 (uno)</strong></p>
+    <p><strong>Archivos Permitidos: docx (Documentos Word)</strong></p>
+    <p><strong>Máximo de caracteres por archivo: 3000 caracteres (tresmil caracteres).</strong></p>
+</span>
+<br><br><br>
+
+<!-- START BLOCK : boton_agregar_titulo_sintitulo -->
+<br><br><br><br><br><br>
+<a href="index.php?action=Registrar::agregar_titulo" >
+<button type="button"  class="btn btn-primary btn-md">Agregar un Título
+</button> </a>
+<!-- END BLOCK : boton_agregar_titulo_sintitulo -->
+
+
+<!-- START BLOCK : menu_bienvenida_con_2_titulos -->
+<div class="alert alert-success">
+	<span><STRONG>Título Nº{orden} </STRONG></span><br>
+	<span><b>Autores</b></span><br>
+	<!--<textarea autofocus rows=3 cols=50 type=text name=entradae>" . {autores} . "</textarea>"<br>-->
+	<span>{autores}</span><br>
+	<span><b>Título</b></span><br>
+	<span>{titulo}</span><br>
+	<span><b>Area</b></span><br>
+	<span>{area}</span><br>
+	<span><b>Sub-Area</b></span><br>
+	<span>{subarea}</span><br>
+	<span><b>Tipo</b></span><br>
+	<span>{tipo}</span><br>	
+			        
+</div>
+<!-- START BLOCK : eliminar_boton -->
+<a align="center" href="index.php?action=archivo::eliminar_titulo&id={id_titulo_eliminar}" height="100px">
+<button type="button" class="btn btn-danger">Eliminar Título</button></a>
+<!-- END BLOCK : eliminar_boton -->
+<!-- START BLOCK : titulo_ya_asignado -->
+<div class="alert alert-warning"><span><h4>Este titulo ya fue asignado a un evaluador. No se puede eliminar!</h4></span></div>
+<!-- START BLOCK : condicion -->
+<div class="alert alert-info">
+<p><h3>Su publicacion ya fue evaluada. En breve recibira en su correo su condicion y su devolucion.</h3></p>
+</div>
+<!--<div class="alert alert-info"><span><h4>Condicion: <strong>{condicion}</strong></h4></span>
+<span>Descargar Devolucion:</span>
+<a href="{id_archivo}"  download = 'devolucion_{titulo_descargar}'><button type="button"  class="btn btn-success btn-md">Descargar
+                    </button> </a></div>-->
+<!-- END BLOCK : condicion -->
+<!-- END BLOCK : titulo_ya_asignado -->
+<br><br>
+
+<!-- START BLOCK : Alert_Info_YaNoMas -->
+<div class="alert alert-info">
+  <strong>Informacion</strong> Ya no puede agregar mas títulos.
+</div>
+<!-- END BLOCK : Alert_Info_YaNoMas -->
+<!-- START BLOCK : boton_agregar_titulo -->
+<br><br><br><br><br><br>
+<a href="index.php?action=Registrar::agregar_titulo" >
+<button type="button"  class="btn btn-primary btn-md">Agregar un Título
+</button> </a>
+<!-- END BLOCK : boton_agregar_titulo -->
+<!-- END BLOCK : menu_bienvenida_con_2_titulos -->
+
+
+
+
+
+<br><br>
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

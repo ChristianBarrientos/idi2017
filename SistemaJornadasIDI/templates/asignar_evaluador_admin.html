@@ -1,0 +1,40 @@
+<h2 align="left">{nombre_inscripto}</h2>
+<h3 align="left">Títulos</h3>
+<h4 style="color: red;">Debe asignar MINIMO 2 EVALUADORES MAXIMO 3 EVALUADORES</h4>
+<table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Nombre</th>
+            <th>Area</th>
+            <th>Autores</th>
+            <th>Tipo</th>            
+            <th>Evaluador</th>
+            
+           
+        </tr>
+        <tr>
+        <!-- START BLOCK : cuerpo_lista -->
+            <td>{nombre}</td>
+            <td>{area}</td>
+            <td>{autores}</td>
+            <td>{tipo}</td>
+            <td>
+            {evaluador_ok_nook}
+            <!-- START BLOCK : boton_activa_asigna -->
+                <a href="index.php?action=Ingreso::asigna_evaluador_elegir_evaluador&id={id_titulo}" >
+                    <button type="button"  class="btn btn-success btn-md">Asignar
+                    </button> </a>
+            <!-- END BLOCK : boton_activa_asigna -->
+            <!-- START BLOCK : con_evaluador_boton_ver -->
+                <a href="index.php?action=Ingreso::ver_evaluador&id={id_usuario}" >
+                    <button type="button"  class="btn btn-info btn-md">Ver 
+                    </button> </a>
+            <!-- END BLOCK : con_evaluador_boton_ver -->
+            </td>
+           
+            
+        </tr>
+        <!-- END BLOCK : cuerpo_lista -->
+    </table>
+<br><br>    
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

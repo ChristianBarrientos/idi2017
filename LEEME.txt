@@ -1,0 +1,5 @@
+Modificar la direccion en:
+SistemaJornadasIDI->modelos->titulo.model.php
+en este archivo se la funcion ELIMINAR_ARCHIVO,
+se debe modificar la variable $UBICACION_CARPETA
+la misma debe poseer la direccion absoluta en la cual se almacenan los archivos.

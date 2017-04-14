@@ -1,0 +1,50 @@
+                    <form  method="post" action="index.php?action=Registrar::registrar_usuario_bd">
+                        <h3>Complete Con Sus Datos</h3>
+                        <br>
+                        <div class="form-group">
+                             <label for="nombre">Nombre*</label>
+                             <input name="nombre" type="text" class="form-control"  placeholder="Nombre" required>
+                         </div>
+                         <div class="form-group">
+                             <label for="apellido">Apellido*</label>
+                             <input name="apellido" type="text" class="form-control"  placeholder="Apellido" required>
+                         </div>
+
+                         <div class="form-group">
+                             <label for="dni">DNI*</label>
+                             <input name="dni" type="number" min="1000000" class="form-control"  placeholder="Documento de Identidad" pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" required>
+                         </div>
+                         
+                         <!--<div class="alert alert-danger">Correo Ya en Uso!!</div>-->
+                         <!-- START BLOCK : correo_en_uso -->
+                         <!-- END BLOCK : correo_en_uso -->
+                         
+                         <div class="form-group">
+                             <label for="correo">Email*</label>
+                             <input name="correo" type="email" class="form-control"  placeholder="Email" required>
+                         </div>
+                         
+
+                         <div class="form-group">
+                             <label for="pass">Contraseña</label>
+                             <input name="pass" id="pass" type="password" class="form-control" placeholder="Contraseña" required>
+                         </div>
+                         <!-- START BLOCK : mal_pass -->
+                         <div class="alert alert-danger">Contraseña Mal Repetida!!</div>
+                         <!-- END BLOCK : mal_pass -->
+                         <div class="form-group">
+                             <label for="passrepite">Repetir Contraseña</label>
+                             <input name="passrepite" id="pass_repite" type="password" class="form-control" placeholder="Repetir Contraseña" required>
+                         </div>
+                         <div class="checkbox">
+                            <label><input type="checkbox" required>Tilde aqui Para Confirmar los Datos</label>
+                         </div>
+                         <span>* Campos Obligatorios</span>
+                         <div class="boton_centro">
+                            <button type="submit" class="btn btn-primary" >Registrarme</button>
+                         </div>
+                    </form>
+                    
+                
+               
+ 

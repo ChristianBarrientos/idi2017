@@ -1,0 +1,26 @@
+<h2 align="left">{nombre_titulo}</h2>
+
+<table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Condicion</th>
+            <th>Descarga</th>
+
+        </tr>
+        <tr>
+        <!-- START BLOCK : cuerpo_lista -->
+            <td>{Condicion}</td>
+            <td>
+            <a href="{id_archivo}" download>
+                    <button type="button"  class="btn btn-success btn-md">Descargar
+                    </button> </a>
+            </td>
+           
+            
+        </tr>
+        <!-- END BLOCK : cuerpo_lista -->
+</table>
+<br><br>    
+
+<br><br>   
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Evaluador</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

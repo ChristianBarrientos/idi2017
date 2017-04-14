@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta http-equiv="Expires" content="0" /> 
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>IDI</title>
+    <!--CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo_christian.css?v=1.1" type="text/css">
+    <!--JavaScript -->
+    <script type="text/javascript" src="js/javascript_christian.js?v=2.9"</script>
+    <!--<script type="text/javascript" src="js/custom-file-input.js"></script>
+    <script type="text/javascript" src="js/jquery.custom-file-input.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-v1.min.js"></script>
+    <!-- imagen de la pestaña -->
+    
+    <link href="imagenes/favicon.ico" rel='shortcut icon' type='image/x-icon'>
+    <script Language="JavaScript">
+       if(window.history.forward(1) != null)   {
+        <?php 
+            $ok = new Registrar_Controller();
+            $ok ->cerrar_sesion();
+        ?>
+            window.history.forward(1);
+       }
+    </script> 
+</head>
+
+<body class="fondo2" onLoad=”history.go(+1)>
+<div class="formulario2">
+            <div class="centro_form2">
+                
+            <img alt="XII Jornadas de Ciencia y Tecnología de Facultades de Ingeniería del NOA" height="186px; " id="Header1_headerimg" src="imagenes/encabezado4.png" style="display: block" width="100%;" height="100%;">
+                <br><br><br>
+                    {contenido}
+
+                    {okuser}
+            </div>
+</div>
+
+    <!-- Pie de Pagina -->
+    <footer id="piepagina">
+        <div class="row margen">
+            <div class="col-lg-1 col-md-1">
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+                <div class="text-center">
+                <hr/>
+                    <div class="row"><h3 class="font-pie">Instituto de Informatica</h3></div>
+                    <div class="row"><h3 class="font-pie">Universidad Nacional de Catamarca</h3></div>
+                    <a class="btn btn-social-icon btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social-icon', 'click', 'btn-facebook']);"><span class="fa fa-facebook"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<form enctype="multipart/form-data" action="index.php?action=Devolucion::realizar_entraga_devolucion&id={id_titulo}&id_evaluador={id_evaluador}" 	method="post">
+			        <span><h3>Ingrese los datos de su Devolucion</h3></span><br><br>
+			       
+                 
+                    <div class="form-group">
+                       <span class="lead"><strong>Devolucion*</strong></span>
+                       <br><br>
+                       <input type="file"  name="archivito" accept="application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" >
+                    </div>
+                    <br><br>
+                    <div class="form-group">
+                        <label for="condicion" class="lead"><strong>Condicion*</strong></label>
+                        <div class="radio">
+                            <label><input name="condicion" id="mismo" type="radio" value="aprobado" required >Aprobado</label>
+                        </div>
+                        <div class="radio">
+                           
+                            <label><input  name="condicion" id="mismo" type="radio" value="desaprobado" required >Desaprobado</label>
+                        </div>
+                    </div>
+                    <br>
+                    <span>* Campos Obligatorios</span>
+                    <br><br>
+                    <div class="boton_centro">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                     </div>
+                     
+			    </form>
+          <br><br>
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Evaluador</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

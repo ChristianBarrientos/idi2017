@@ -1,0 +1,73 @@
+<h1 align="center">Administrar Usuarios</h1>
+<!--
+<div class="col-lg-12" align="center">
+    <h3 class="col-lg-12">¿desea dar de alta a un USUARIO?</h3>
+    <div class="col-lg-5"></div>
+    <button type="button" class="btn btn-success col-lg-2" href="#contenedor_ventana_flotante" data-toggle="modal">Alta</button>
+</div>-->
+
+<br>
+
+    <table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Correo</th>
+            <!--<th>Cantidad de Titulos</th>-->
+            <th>Privilegio</th>
+            <th>Elevar Privilegio</th>
+            <th>Baja</th>
+            <th>Contraseña</th>
+        </tr>
+        <!-- START BLOCK : body -->
+        <tr>
+            <td>{apellido}</td>
+            <td>{nombre}</td>
+            <td>{dni}</td>
+            <td>{correo}</td>
+            <td>
+                <!--{titulo}
+                
+                <a href="index.php?action=Ingreso::ver_titulos$" >
+                    <button type="button"  class="btn btn-info btn-md">Ver
+                    </button> </a>-->
+                    {permiso}
+            </td>
+            <td>
+            <!-- START BLOCK : boton_evaluador -->
+                <a href="index.php?action=Ingreso::elevar_privilegio&id={id_usuario}" >
+                    <button type="button"  class="btn btn-success btn-md">Hacer Evaluador
+                    </button> </a>
+            <!-- END BLOCK : boton_evaluador -->
+
+            <!-- START BLOCK : boton_administrador -->
+            <a href="index.php?action=Ingreso::elevar_privilegio&id={id_usuario}" >
+                    <button type="button"  class="btn btn-success btn-md">Hacer Administrador
+                    </button> </a>
+            <!-- END BLOCK : boton_administrador -->
+            </td>
+            <!-- START BLOCK : demas_opciones -->
+            <td>
+                <a href="index.php?action=Ingreso::baja_usuario&id={id_usuario}" >
+                    <button type="button"  class="btn btn-danger btn-md">Baja
+                    </button> </a>
+            </td>
+            <td>
+                <a href="index.php?action=Ingreso::resetear_contraseña&id={id_usuario}" >
+                    <button type="button"  class="btn btn-warning btn-md">Resetear Contraseña
+                    </button> </a>
+            </td>
+             <!-- END BLOCK : demas_opciones -->
+        </tr>
+        <!-- END BLOCK : body -->
+    </table>
+    <br>
+<h2><strong>Importante</strong></h2>
+<H3>Debe esperar hasta que la pagina carge completamente.</H3>
+    <a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+    <a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 
+
+
+
+

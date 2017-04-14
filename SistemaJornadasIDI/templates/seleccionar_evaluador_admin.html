@@ -1,0 +1,56 @@
+<span><h3>Seleccione un evaluador para el siguiente titulo:</h3></span>
+<strong>Titulo:</strong>{nombre_titulo}
+<h5 align="left"></h5>
+<strong>Autores:</strong>{autor_titulo}
+<h5 align="left"></h5>
+<strong>Tipo:</strong>{tipo_titulo}
+<h5 align="left"></h5>
+<strong>Area:</strong>{area_titulo}
+<h5 align="left"></h5>
+<!-- START BLOCK : id_t -->
+<form action="index.php?action=Ingreso::asignar_evaluador_final&id_t={id_titulo}"  method="post">
+<!-- END BLOCK : id_t -->  
+        
+            <div class="form-group">
+                <table cellpadding="15" class="table table-hover" align="center">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>DNI</th> 
+                        <th>Trabajos Asignados</th>    
+                        <th>Elegir</th>        
+                    </tr>
+                    <!-- START BLOCK : usuarios_evaluadores -->
+                    <tr>      
+                        <td>{nombre}</td>
+                        <td>{apellido}</td>
+                        <td>{correo}</td>
+                        <td>{dni}</td>
+                        <td>{cantidad_trabajos_asignados}</td>
+                        <td>
+                            <label class="radio-inline">
+                                <input type="checkbox" name="evaluador_check_[]" value={id_usuario}>
+
+                            </label>  
+
+                        </td>
+                    </tr>
+                                
+                    <!-- END BLOCK : usuarios_evaluadores -->           
+                </table>
+            </div>
+        <div class="form-group">
+            <div class="boton_centro">
+                <button type="submit" class="btn btn-primary">OK EVALUADOR</button>
+            </div>
+        </div>
+        
+</form>
+<!-- START BLOCK : sin_evaluadores_asignados -->
+    <h2 align="center">No existen evaluadores aun.</h2>
+<!-- END BLOCK : sin_evaluadores_asignados -->
+
+<br><br>    
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

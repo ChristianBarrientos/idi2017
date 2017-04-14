@@ -1,0 +1,239 @@
+<!-- START BLOCK : informacion_archivo -->
+<span>
+    <p><strong>Máximo de títulos: 2 (dos)</strong></p>
+    <p><strong>Máximo de resumenes por título: 1 (uno)</strong></p>
+    <p><strong>Máximo de trabajos final por título: 1 (uno)</strong></p>
+    <p><strong>Archivos Permitidos: docx (Documentos Word)</strong></p>
+    <p><strong>Máximo de caracteres por archivo: 3000 caracteres (tresmil caracteres).</strong></p>
+</span>
+<!-- END BLOCK : informacion_archivo -->
+
+            <!-- START BLOCK : archivo_no_ok -->
+                    <div class="alert alert-danger">
+                        <span>No se pudo subir el Archivo. Intente mas Tarde</span>
+                        <br><br>
+                        <a href="index.php?action=Registrar::cerrar_sesion">Salir</a> 
+                    </div>
+            <!-- END BLOCK : archivo_no_ok -->
+            <!-- START BLOCK : titulo_ya_devuelto -->
+                    <div class="alert alert-info">
+                        <span>Al titulo {nr_titulo} ya se le asigno una devolucion</span>
+                        <br><br>
+                        <a href="index.php?action=Registrar::cerrar_sesion">Salir</a> 
+                    </div>
+            <!-- END BLOCK : titulo_ya_devuelto -->
+                <!-- START BLOCK : subir_archivo --> 
+            	<form enctype="multipart/form-data" action="index.php?action=Archivo::guardar_archivo" 	method="post">
+			        <span><h3>Ingrese los datos de su trabajo</h3></span><br><br>
+			        <div class="form-group">
+                        <label for="area" class="lead"><strong>Area*</strong></label><br>
+                        <!--<<input name="area" type="text" class="form-control"  placeholder="Area del Resumen" required>-->
+                        <select id="areas" name="area">
+                        	<option>Gestión de la Educación en Ingeniería</option>
+                        	<option>Ciencias Básicas de Ingeniería</option>
+                            <option>Tecnologías Básicas y Aplicadas</option>
+                            <option>Computación</option>
+                            <option>Forestal, Agronomía y Alimentos</option>
+                            <option>Ciencias de la Tierra</option>
+                            <option>Ambiente</option>
+                        </select>
+                    </div>
+
+                     <div class="form-group">
+                        <label for="subarea" class="lead"><strong>Sub-Area*</strong></label><br>
+                        <!--<<input name="area" type="text" class="form-control"  placeholder="Area del Resumen" required>-->
+                        <select name="subarea" id="subarea" onclick="captura_area();">
+                            <optgroup label="Gestión de la Educación en Ingeniería">
+                                <option value="Enseñanza y currícula de la Ingeniería">Enseñanza y currícula de la Ingeniería</option>
+                                <option value="Educación basada en competencias">Educación basada en competencias</option>
+                                <option value="Universidad, empresa y desarrollo regional">Universidad, empresa y desarrollo regional</option>
+                                <option value="Gestión de la calidad educativa">Gestión de la calidad educativa</option>
+                                <option value="Formación de emprendedores">Formación de emprendedores</option>
+                                <option value="Práctica profesional supervisada (PPS)">Práctica profesional supervisada (PPS)</option>
+                                <option value="Formación experimental, Innovaciones, experiencias e investigación en la Ciencias Básicas">Formación experimental, Innovaciones, experiencias e investigación en la Ciencias Básicas</option>
+                                <option value="Innovaciones, experiencias e investigación en la Tecnologías Básicas y Aplicadas">Innovaciones, experiencias e investigación en la Tecnologías Básicas y Aplicadas</option>
+                                <option value="Innovaciones, experiencias e investigación en la Formación Complementaria">Innovaciones, experiencias e investigación en la Formación Complementaria</option>
+                                <option value="Impacto de las Tecnologías de la Información y las Comunicaciones (TIC)">Impacto de las Tecnologías de la Información y las Comunicaciones (TIC)</option>
+                                <option value="Ingreso, competencias, retención y articulación con la enseñanza media">Ingreso, competencias, retención y articulación con la enseñanza media</option>
+                                <option value="Educación continua y postgrados profesionales">Educación continua y postgrados profesionales</option>
+                            </optgroup>
+                            <optgroup label="Ciencias Básicas de Ingeniería">
+                                <option value="Matemática">Matemática</option>
+                                <option value="Estadística">Estadística</option>
+                                <option value="Biometría">Biometría</option>
+                                <option value="Diseños Muestrales y Experimentales">Diseños Muestrales y Experimentales</option>
+                                <option value="Física">Física</option>
+                                <option value="Química">Química</option>
+                                <option value="Biología">Biología</option>
+                                
+                            </optgroup>
+                             <optgroup label="Tecnologías Básicas y Aplicadas" >
+                                <option value="Ingeniería">Ingeniería</option>
+                                <option value="Ingeniería y Tecnología Física">Ingeniería y Tecnología Física</option>
+                                <option value="Ingeniería Civil">Ingeniería Civil</option>
+                                <option value="Ingeniería Ambiental">Ingeniería Ambiental</option>
+                                <option value="Ingeniería Electromecánica">Ingeniería Electromecánica</option>
+                                <option value="Ingeniería y Tecnología Química">Ingeniería y Tecnología Química</option>
+                                <option value="Ingeniería en Sistemas">Ingeniería en Sistemas</option>
+                                <option value="Tecnología de la Construcción">Tecnología de la Construcción</option>
+                                <option value="Ingeniería y Tecnología Eléctricas">Ingeniería y Tecnología Eléctricas</option>
+                                <option value="Tecnología Electrónica">Tecnología Electrónica</option>
+                                <option value="Tecnología Industrial">Tecnología Industrial</option>
+                                <option value="Tecnología de la Instrumentación">Tecnología de la Instrumentación</option>
+                                <option value="Tecnología de Materiales">Tecnología de Materiales</option>
+                                <option value="Ingeniería y Tecnología Mecánicas">Ingeniería y Tecnología Mecánicas</option>
+                                <option value="Tecnología Metalúrgica">Tecnología Metalúrgica</option>
+                                <option value="Tecnología Minera">Tecnología Minera</option>
+                                <option value="Ingeniería y Tecnología del Petróleo">Ingeniería y Tecnología del Petróleo</option>
+                                <option value="Tecnología Energética">Tecnología Energética</option>
+                                <option value="Tecnología de las Telecomunicaciones">Tecnología de las Telecomunicaciones</option>
+                                <option value="Procesos Tecnológicos">Procesos Tecnológicos</option>
+                                <option value="Biotecnología">Biotecnología</option>
+                                <option value="Nanotecnología y Bioingeniería">Nanotecnología y Bioingeniería</option>
+                                <option value="Tecnología de la Información y Comunicació">Tecnología de la Información y Comunicació</option>
+                                <option value="Ingeniería en Agrimensura">Ingeniería en Agrimensura</option>
+                            </optgroup>
+                             <optgroup label="Computación">
+                                <option value="Computación">Computación</option>
+                                <option value="Informática">Informática</option>
+                                <option value="Inteligencia Artificial">Inteligencia Artificial</option>
+                                <option value="Robótica">Robótica</option>
+                                <option value="Recuperación de Información">Recuperación de Información</option>
+                                <option value="Sistema de Información">Sistema de Información</option>
+                                <option value="Control de Procesos">Control de Procesos</option>
+                                <option value="Redes">Redes</option>
+                                <option value="Desarrollo de Hardware">Desarrollo de Hardware</option>
+                                <option value="Desarrollo de Software">Desarrollo de Software</option>
+
+                            </optgroup>
+                             <optgroup label="Forestal, Agronomía y Alimentos">
+                                <option value="Ciencias Agropecuarias">Ciencias Agropecuarias</option>
+                                <option value="Ingeniería Rural">Ingeniería Rural</option>
+                                <option value="Silvicultura">Silvicultura</option>
+                                <option value="Ciencia y Tecnología de los alimentos">Ciencia y Tecnología de los alimentos</option>
+                                
+
+                            </optgroup>
+                             <optgroup label="Ciencias de la Tierra">
+                                <option value="Ciencias de la Tierra">Ciencias de la Tierra</option>
+                                <option value="Ciencias de la Atmósfera">Ciencias de la Atmósfera</option>
+                                <option value="Climatología">Climatología</option>
+                                <option value="Geoquímica">Geoquímica</option>
+                                <option value="Geodesia">Geodesia</option>
+                                <option value="Geología">Geología</option>
+                                <option value="Geofísica">Geofísica</option>
+                                <option value="Hidrología">Hidrología</option>
+                                <option value="Meteorología">Meteorología</option>
+                                <option value="Mineralogía">Mineralogía</option>
+                                <option value="Sismología">Sismología</option>
+                            </optgroup>
+                             <optgroup label="Ambiente">
+                                <option value="Ambiente">Ambiente</option>
+                                <option value="Energías Renovables y Ambiente">Energías Renovables y Ambiente</option>
+                                <option value="Impacto y Gestión Ambiental">Impacto y Gestión Ambiental</option>
+                                <option value="Desarrollo Sustentable">Desarrollo Sustentable</option>
+                                <option value="Manejo y Conservación de Recursos Naturales">Manejo y Conservación de Recursos Naturales</option>
+                                <option value="Cambio Climático">Cambio Climático</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="titulo" class="lead"><strong>Título*</strong></label>
+                        <input name="titulo" type="text" class="form-control"  placeholder="Titulo del Trabajo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo" class="lead"><strong>Tipo*</strong></label>
+                        <div class="checkbox">
+                            <label><input name="numero[]" type="checkbox" value="Post">Poster</label>
+                        </div>
+                        <div class="checkbox">
+                           
+                            <label><input  name="numero[]" type="checkbox" value="Comunicacion Oral">Comunicación Oral</label>
+                        </div>
+                    </div>
+                    <div class="form-group" id="autores">
+
+                        <label for="autores" class="lead"><strong>Autores*</strong></label><br>
+                         
+                        <!--<textarea name='autores' class="form-control" rows="5" id="comment" required></textarea>--><br><br>
+                        <label>Autor Nº1</label>
+                        <br><br>
+                        <label>Nombre*</label>
+                        <input required placeholder="Ingrese su Nombre"  type="text" name="autor_nombre1">
+                        <label>Apellido*</label>
+                        <input required placeholder="Ingrese su Apellido"  type="text" name="autor_apellido1">
+
+                        <br><br>
+                        <label>Filiacion*</label>
+                        <input required placeholder="Ingrese Filiacion"  type="text" name="filiacion_1">
+                        <label><input  name="expone_1" type="checkbox" value="Comunicacion Oral">Expositor </label> 
+
+                        
+                    </div>
+                    <button class="btn btn-info" onclick="agregar_autor();">Agregar Autor</button>
+                    <br><br>
+                    <div class="form-group">
+                       <span class="lead"><strong>Resumen*</strong></span>
+                      
+                       <p style="color: red;">Recuerda, no mas de 3000 caracteres.</p>
+                    <input type="file"  name="archivito" accept="application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
+               
+
+                    </div>
+                    
+                    <div class="form-group">
+                       <span class="lead"><strong>Articulo Completo</strong></span>
+                       <br><br>
+                       <input type="file"  name="trabajofinal" accept="application/msword,
+  application/vnd.openxmlformats-officedocument.wordprocessingml.document" >
+                    </div>
+                    <span>* Campos Obligatorios</span>
+                    <div class="boton_centro">
+                        <button type="submit" class="btn btn-primary">Enviar archivo</button>
+                     </div>
+                     
+			    </form>
+                    <!-- END BLOCK : subir_archivo -->
+
+
+			    <!-- START BLOCK : archivo_ok -->
+			        <div class="alert alert-success">
+			        	<span><b>Archivo Subido Con Exito!!</b></span><br>
+                        <span><b>Resumen Para</b></span><br>
+                        <span>{titulo}</span><br>
+			        	<span><b>Nombre del Archivo</b></span><br>
+			        	<span>{nombre}</span><br>
+			        	
+			        	
+			        	
+
+			        </div>
+			    <!-- END BLOCK : archivo_ok -->
+
+                <!-- START BLOCK : trabajofinal_ok -->
+                    <div class="alert alert-success">
+                        <span><b>Archivo Subido Con Exito!!</b></span><br>
+                        <span><b>Trabajo Final Para</b></span><br>
+                        <span>{titulo}</span><br>
+                        <span><b>Nombre del Archivo</b></span><br>
+                        <span>{nombre}</span><br>
+                        
+                    </div>
+                <!-- END BLOCK : trabajofinal_ok -->
+
+
+                <!-- START BLOCK : archivo_YaSubido -->
+                <div class="alert alert-info">
+                         <span>Usted ya ha relizado la Entrega.</span>
+                        <br><br>
+                        
+                    
+                </div>
+                
+                <!-- END BLOCK : archivo_YaSubido -->
+
+			   <br><br>
+                <a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesión</a> &nbsp&nbsp&nbsp&nbsp
+                <a href="index.php?action=Registrar::mostrar_titulos_user">Menu Títulos</a> 
+ 

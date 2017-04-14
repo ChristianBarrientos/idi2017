@@ -1,0 +1,102 @@
+
+/*
+/*COLOR FONDO 
+body{
+	background: #3d85c6;
+
+
+}
+/*FORMULARIO LOGIN USUARIO
+.formulario{
+	width: 600px;
+	/*background: #FFFFFF;
+}
+.centro_form{
+	position: relative;
+	width: 90%;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	margin-left: 30px;
+	margin-right: 30px;
+	left: 70%;
+	border: 2px solid black;
+	background: #FFFFFF;
+	
+}
+.boton_centro{
+	position: relative;
+	left: 40%;
+
+}
+/*BOTON HACIA FORMULARIO PARA REGISTRAR USUARIOS
+  a {
+     background-image : url("imagen.jpg");
+     border-bottom : 2px dashed;
+     text-decoration : none;
+     color: #485193;
+  }
+
+  a:hover {
+     text-decoration : underline;
+     color : #d15e2e;
+  }
+
+*/
+
+/*COLOR FONDO */
+body{
+	background: #3d85c6;
+
+
+}
+/*FORMULARIO LOGIN USUARIO*/
+.formulario2{
+	width: 100%;
+	/*background: #FFFFFF;*/
+}
+.centro_form2{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	margin-left: 0px;
+	margin-right: 0px;
+	left: 0%;
+	
+	background: #FFFFFF;
+	
+}
+
+.centro_form2 form{
+	
+	width: 50%;
+	position: relative;
+	left: 25%;
+	border: 1px solid red;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+}
+
+
+/*BOTON HACIA FORMULARIO PARA REGISTRAR USUARIOS*/
+  a {
+     background-image : url("imagen.jpg");
+     border-bottom : 2px dashed;
+     text-decoration : none;
+     color: #485193;
+  }
+
+  a:hover {
+     text-decoration : underline;
+     color : #d15e2e;
+  }
+
+
+
+  /*SUBIR ARCHIVO EVALUADOR*/

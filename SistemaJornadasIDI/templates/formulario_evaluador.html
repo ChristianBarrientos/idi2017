@@ -1,0 +1,39 @@
+<form method="post" action="index.php?action=Registrar::tramite_evaluador_2">
+	<h3>Llene el formulario.</h3>
+	<h2>Posteriormente, si es aceptador, recibira un usuario y contraseña por su correo.</h2>
+     <h3>Complete Con Sus Datos</h3>
+                        <br>
+                        <div class="form-group">
+                             <label for="nombre">Nombre*</label>
+                             <input name="nombre" type="text" class="form-control"  placeholder="Nombre" required>
+                         </div>
+                         <div class="form-group">
+                             <label for="apellido">Apellido*</label>
+                             <input name="apellido" type="text" class="form-control"  placeholder="Apellido" required>
+                         </div>
+                         <!-- START BLOCK : dni_en_uso -->
+                        <div class="alert alert-danger">DNI Ya en Uso!!</div>
+                         
+                         <!-- END BLOCK : dni_en_uso -->
+                          <div class="form-group">
+                             <label for="dni">DNI*</label>
+                             <input name="dni" type="number" class="form-control"  placeholder="Documento de Identidad" pattern="^[\w._%-]+@[\w.-]+\.[a-zA-Z]{2,4}$" required>
+                         </div>
+                         
+                        <!--<div class="alert alert-danger">Correo Ya en Uso!!</div>-->
+                         <!-- START BLOCK : correo_en_uso -->
+                         <!-- END BLOCK : correo_en_uso -->
+                         <div class="form-group">
+                             <label for="correo">Email*</label>
+                             <input name="correo" type="email" class="form-control"  placeholder="Email" required>
+                         </div>
+                         <div class="checkbox">
+                            <label><input type="checkbox" required>Tilde aqui Para Confirmar los Datos</label>
+                         </div>
+                         <span>* Campos Obligatorios</span>
+     					<br><br>
+     					 <div class="boton_centro">
+                            <button type="submit" class="btn btn-primary" >Registrarme</button>
+                         </div>
+
+</form>

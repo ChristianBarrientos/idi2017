@@ -1,0 +1,100 @@
+<h1 align="center">Inscriptos</h1>
+
+<h2 align="left">PARTICIPANTES</h2>
+<br>
+
+    <table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Cantidad de Titulos</th>            
+            <th>Cantidad Evaluadores</th>
+        </tr>
+        <tr>
+       <!-- START BLOCK : usuarios -->
+            <td>{apellido}</td>
+            <td>{nombre}</td>
+            <td>{correo}</td>
+            <td>
+                {titulo}
+
+                <!-- START BLOCK : con_titulo -->
+                <a href="index.php?action=Ingreso::ver_titulos&id={id_usuario}" >
+                    <button type="button"  class="btn btn-info btn-md">Ver
+                    </button> </a>                    
+                <!-- END BLOCK : con_titulo -->
+            </td>
+            <td>
+            <!-- START BLOCK : evaluador_cantidad -->
+                {evaluadorcantidad}
+            <!-- END BLOCK : evaluador_cantidad -->
+            <!-- START BLOCK : sin_evaluador -->
+                <a href="index.php?action=Ingreso::asigna_evaluador&id={id_usuario}" >
+                    <button type="button"  class="btn btn-success btn-md">Asignar Evaluador
+                    </button> </a>
+            <!-- END BLOCK : sin_evaluador -->
+            <!-- START BLOCK : con_evaluador_boton_ver -->
+                <a href="index.php?action=Ingreso::ver_evaluador&id={id_usuario}" >
+                    <button type="button"  class="btn btn-info btn-md">Ver Evaluador
+                    </button> </a>
+            <!-- END BLOCK : con_evaluador_boton_ver -->
+            </td>
+            
+        </tr>
+        <!-- END BLOCK : usuarios -->
+    </table>
+    <br>
+
+
+<h2 align="left">EVALUADORES</h2>
+<br>
+
+    <table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Titulos Asignados</th>            
+            <th>Devoluciones Realizadas</th>
+        </tr>
+
+        <!-- START BLOCK : usuarios_evaluadores -->
+        <tr>
+        
+            <td>{apellido}</td>
+            <td>{nombre}</td>
+            <td>{correo}</td>
+            <td>
+                {titulo}
+                <!-- START BLOCK : con_titulo_evaluador -->
+                <a href="index.php?action=Ingreso::ver_titulos_evaluador&id_ev={id_evaluador}" >
+                    <button type="button"  class="btn btn-info btn-md">Ver
+                    </button> </a>                    
+                 <!-- END BLOCK : con_titulo_evaluador -->
+            </td>
+            <td>
+            <!-- START BLOCK : habilita_devolucion_0 -->
+                  {devoluciones}
+            <!-- END BLOCK : habilita_devolucion_0 -->
+              
+            <!-- START BLOCK : sin_evaluador_evaluador -->
+                <a href="index.php?action=Ingreso::ver_devoluciones_evaluador&id={id_usuario}" >
+                    <button type="button"  class="btn btn-info btn-md">Ver
+                    </button> </a>
+            <!-- END BLOCK : sin_evaluador_evaluador -->
+            </td>
+            
+        </tr>
+        <!-- END BLOCK : usuarios_evaluadores -->
+
+    </table>
+        <!-- START BLOCK : sin_evaluadores_asignados -->
+            <h2 align="center">No existen evaluadores aun.</h2>
+        <!-- END BLOCK : sin_evaluadores_asignados -->
+    <br>
+
+<h2><strong>Importante</strong></h2>
+<H3>Debe esperar hasta que la pagina carge completamente.</H3>
+    <a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+    <a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

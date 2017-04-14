@@ -1,0 +1,45 @@
+
+<span><h2>Usuario</h2></span>
+<strong>Usuario:</strong>{usuario_nombre}&nbsp&nbsp&nbsp{usuario_apellido}
+<h3 align="left"></h3>
+<strong>Correo:</strong>{usuario_correo}
+<hr>
+<!-- START BLOCK : bloque_completo -->
+<span><h2>Titulo {numero}</h2></span>
+<h3 align="left"></h3>
+<strong>Titulo:</strong>{nombre_titulo}
+<h3 align="left"></h3>
+<strong>Tipo:</strong>{tipo_titulo}
+<h3 align="left"></h3>
+<strong>Area:</strong>{area_titulo}
+<h3 align="left"></h3>
+<strong>Area:</strong>{autor_titulo}
+<h3 align="left"></h3>
+
+<span><h2>Datos Evaluador</h2></span>
+<table cellpadding="15" class="table table-hover" align="center">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>DNI</th> 
+               
+    </tr>
+    <!-- START BLOCK : usuarios_evaluadores -->
+    <tr>      
+        <td>{nombre}</td>
+        <td>{apellido}</td>
+        <td>{correo}</td>
+        <td>{dni}</td>
+    </tr>               
+    <!-- END BLOCK : usuarios_evaluadores -->  
+
+
+</table>
+<!-- START BLOCK : sin_usuarios_evaluadores -->  
+        <span><h3>Este titulo no posee evaluadores asignados.</h3></span>
+    <!-- END BLOCK : sin_usuarios_evaluadores --> 
+<!-- END BLOCK : bloque_completo -->
+<br><br>    
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

@@ -1,0 +1,46 @@
+<h1 align="center">Administrar Pendientes</h1>
+<br>
+    <table cellpadding="15" class="table table-hover" align="center">
+        <tr>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>DNI</th>
+            <th>Correo</th>
+            <th></th>
+            <th>Condicion</th>
+            <th></th>
+        </tr>
+        <!-- START BLOCK : body -->
+        <tr>
+            <td>{apellido}</td>
+            <td>{nombre}</td>
+            <td>{dni}</td>
+            <td>{correo}</td>
+            <td>
+            <!-- START BLOCK : aceptado -->
+                <a href="index.php?action=Ingreso::aceptar_pendiente&id={id_pendiente}" >
+                    <button type="button"  class="btn btn-info btn-md">Aceptar</button> 
+                </a>
+            <!-- START BLOCK : aceptado -->
+            </td>
+            
+            <!-- START BLOCK : estado_aceptado -->
+                <strong>ACEPTADO</strong>
+            <!-- START BLOCK : estado_aceptado -->
+            <td>
+            </td>
+            <td>
+            <!-- START BLOCK : rechazado -->
+                <a href="index.php?action=Ingreso::rechazar_pendiente&id={id_pendiente}" >
+                    <button type="button"  class="btn btn-danger btn-md">Rechazar</button> 
+                </a>
+            <!-- START BLOCK : rechazado -->
+            </td>
+        </tr>
+        <!-- END BLOCK : body -->
+    </table>
+    <br>
+<h2><strong>Importante</strong></h2>
+<H3>Debe esperar hasta que la pagina carge completamente.</H3>
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

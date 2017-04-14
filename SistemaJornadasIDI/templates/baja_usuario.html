@@ -1,0 +1,24 @@
+<!-- START BLOCK : ok_baja -->
+<div class="alert alert-info">
+	<span><b>Se pudo dar de Baja con Exito al usuario:</b></span><br>
+    <span><b>Apellido y Nombre</b></span><br>
+    <span>{apellido}&nbsp&nbsp&nbsp&nbsp{nombre}</span><br>
+	<span><b>DNI</b></span><br>
+	<span>{dni}</span><br>
+	<span><b>Privilegio</b></span><br>
+	<span>{permiso}</span><br>
+	<span><b>Titulos</b></span><br>
+	<span>{titulos}</span><br>
+</div>
+<!-- END BLOCK : ok_baja -->
+
+<!-- START BLOCK : no_ok_baja -->
+<div class="alert alert-danger">
+	<h2>No se pueden eliminar usuarios que posean titulo y/o devoluciones y No se puede Autoeliminar.</h2>
+</div>
+<!-- END BLOCK : no_ok_baja -->
+<br><br>
+
+
+<a href="index.php?action=Registrar::mostrar_titulos_user">Paguina Admin</a>&nbsp&nbsp&nbsp&nbsp
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 

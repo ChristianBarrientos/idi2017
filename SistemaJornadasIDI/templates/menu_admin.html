@@ -1,0 +1,62 @@
+<h1 align="center"><b>Bienvenido Administrador</b></h1>
+<!-- Cuerpo -->
+<section id="cuerpo">
+            <div  align="center">
+                <!--usuario-->
+                <h4 > ADMINISTRACION DE USUARIOS</h4>
+                <div  >
+                    <form action="index.php?action=Ingreso::verUsuarios" method="post" >
+                        <button type="submit" class="btn btn-success" href="">Ver Usuarios Registrados</button>
+                    </form>
+                </div>
+            </div> 
+</section>
+
+<section id="cuerpo">
+            <div   align="center">
+                <!--usuario-->
+                <h4 > ADMINISTRACION DE TRABAJOS</h4>
+                <div >
+                    <form action="index.php?action=Ingreso::listar_archivos" method="post" >
+                        <button type="submit" class="btn btn-success" href="">Asignar trabajos</button>
+                    </form>
+                </div>
+            </div> 
+</section>
+
+<section id="cuerpo">
+            <div   align="center">
+                <!--usuario-->
+                <h4 >EVALUADORES PENDIENTES</h4>
+                <div >
+                    <form action="index.php?action=Ingreso::listar_pendientes" method="post" >
+                        <button type="submit" class="btn btn-success" href="">Ver Pendientes</button>
+                    </form>
+                </div>
+            </div> 
+</section>
+
+<!-- Cuerpo -->
+<!--
+<section>
+    <div class="row margen ">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-5 col-md-10 col-sm-12 col-xs-12 ">
+            <div id="administrador.conductor" class="col-lg-11 contenedor-per " align="center">
+               
+                <h4> ADMINISTRACION DE CONDUCTORES</h4>
+               
+                <div class="col-lg-12" id="conductor.boton.ver">
+                    <form action="index.php?action=Registros::verConductores" method="post">
+                        <button type="submit" class="btn btn-warning" href="">Ver Conductores</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+       
+    </div>
+</section>-->
+
+<br><br>
+<a href="index.php?action=Registrar::cerrar_sesion">Terminar Sesion</a> 
